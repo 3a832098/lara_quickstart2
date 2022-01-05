@@ -1,7 +1,19 @@
 @extends('layouts.master')
-
 @section('content')
+
     <!-- 建立任務表單... -->
+    <form action="/task" method="POST" class="form-horizontal">
+    {{ csrf_field() }}
+    <!-- 增加任務按鈕-->
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-6">
+                <button type="submit" class="btn btn-default">
+                    <i class="fa fa-plus"></i> 增加任務
+                </button>
+            </div>
+        </div>
+    </form>
+    </div>
 
     <!-- 目前任務 -->
     @if (count($tasks) > 0)
